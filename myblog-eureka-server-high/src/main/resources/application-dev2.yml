@@ -1,0 +1,9 @@
+server:
+  port: ${dev.dev2Port}
+eureka:
+  client:
+    #此项目不作为客户端注册
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${dev.host}:${dev.dev1Port}/eureka,http://${spring.security.user.name}:${spring.security.user.password}@${dev.host}:${dev.dev3Port}/eureka

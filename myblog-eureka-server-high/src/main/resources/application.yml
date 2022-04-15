@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev3
+  application:
+    name: myblog-eureka-server-high
+  #开启权限认证
+  security:
+    basic:
+      enabled: true
+    user:
+      name: root
+      password: root
+
+
+dev:
+  host: localhost
+  dev1Port: 8761
+  dev2Port: 8762
+  dev3Port: 8763
+
+

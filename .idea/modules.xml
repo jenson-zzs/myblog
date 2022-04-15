@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/myblog.iml" filepath="$PROJECT_DIR$/myblog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-consumer/myblog-consumer.iml" filepath="$PROJECT_DIR$/myblog-consumer/myblog-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-consumer-feign/myblog-consumer-feign.iml" filepath="$PROJECT_DIR$/myblog-consumer-feign/myblog-consumer-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-consumer2/myblog-consumer2.iml" filepath="$PROJECT_DIR$/myblog-consumer2/myblog-consumer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-eureka-server/myblog-eureka-server.iml" filepath="$PROJECT_DIR$/myblog-eureka-server/myblog-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-eureka-server-high/myblog-eureka-server-high.iml" filepath="$PROJECT_DIR$/myblog-eureka-server-high/myblog-eureka-server-high.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-provider/myblog-provider.iml" filepath="$PROJECT_DIR$/myblog-provider/myblog-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-consumer2/myblog-provider (1).iml" filepath="$PROJECT_DIR$/myblog-consumer2/myblog-provider (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/myblog-provider2/myblog-provider2.iml" filepath="$PROJECT_DIR$/myblog-provider2/myblog-provider2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/self-study/self-study.iml" filepath="$PROJECT_DIR$/self-study/self-study.iml" />
+    </modules>
+  </component>
+</project>
