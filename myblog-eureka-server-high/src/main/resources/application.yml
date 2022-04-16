@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev3
+    active: dev1
   application:
     name: myblog-eureka-server-high
   #开启权限认证

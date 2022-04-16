@@ -8,24 +8,26 @@
         <outputRelativeToContentRoot value="true" />
         <module name="myblog-provider" />
         <module name="myblog-eureka-server-high" />
-        <module name="myblog-consumer-feign" />
         <module name="myblog-consumer2" />
+        <module name="myblog-consumer-hystrix" />
         <module name="myblog-eureka-server" />
+        <module name="myblog-consumer-feign-hystrix" />
         <module name="self-study" />
         <module name="myblog-consumer" />
+        <module name="myblog-consumer-feign" />
         <module name="myblog-provider2" />
-        <module name="myblog-provider (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="myblog" target="1.8" />
       <module name="myblog-consumer" target="1.8" />
       <module name="myblog-consumer-feign" target="1.8" />
+      <module name="myblog-consumer-feign-hystrix" target="1.8" />
+      <module name="myblog-consumer-hystrix" target="1.8" />
       <module name="myblog-consumer2" target="1.8" />
       <module name="myblog-eureka-server" target="1.8" />
       <module name="myblog-eureka-server-high" target="1.8" />
       <module name="myblog-provider" target="1.8" />
-      <module name="myblog-provider (1)" target="1.8" />
       <module name="myblog-provider2" target="1.8" />
       <module name="self-study" target="1.8" />
     </bytecodeTargetLevel>
@@ -35,11 +37,12 @@
       <module name="myblog" options="-parameters" />
       <module name="myblog-consumer" options="-parameters" />
       <module name="myblog-consumer-feign" options="-parameters" />
+      <module name="myblog-consumer-feign-hystrix" options="-parameters" />
+      <module name="myblog-consumer-hystrix" options="-parameters" />
       <module name="myblog-consumer2" options="-parameters" />
       <module name="myblog-eureka-server" options="-parameters" />
       <module name="myblog-eureka-server-high" options="-parameters" />
       <module name="myblog-provider" options="-parameters" />
-      <module name="myblog-provider (1)" options="-parameters" />
       <module name="myblog-provider2" options="-parameters" />
       <module name="self-study" options="-parameters" />
     </option>

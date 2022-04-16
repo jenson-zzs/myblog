@@ -1,10 +1,10 @@
 server:
   host: localhost
-  port: 8090
+  port: 8091
 
 spring:
   application:
-    name: myblog-consumer-feign
+    name: myblog-consumer
 
 eurekaServer:
   host: localhost
@@ -14,10 +14,11 @@ eurekaServer:
 
 eureka:
   client:
+    healthcheck:
+      enabled: true
     #将此项目注册到Eureka服务
     register-with-eureka: true
     service-url:
       defaultZone: http://${eurekaServer.user}:${eurekaServer.password}@${eurekaServer.host}:${eurekaServer.port}/eureka
-
-#Hystrix默认的超时时间是1秒
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 1000 #1000毫秒
+  instance:
+    prefer-ip-address: true

@@ -1,6 +1,7 @@
-package com.zzs.myblogconsumer.controller;
+package com.zzs.myblogconsumerhystrix.controller;
 
-import com.zzs.myblogconsumer.domain.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.zzs.myblogconsumerhystrix.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,14 @@ public class UserController {
     private RestTemplate restTemplate;
 
     @GetMapping("/getUser/{id}")
+    @HystrixCommand(fallbackMethod = "getUserFallback")
     public User getUser(@PathVariable Long id){
         return restTemplate.getForObject("http://myblog-provider/user/getUser/"+id,User.class);
+    }
+
+    public User getUserFallback(Long id) {
+        User user = new User();
+        user.setName("王五");
+        return user;
     }
 }
