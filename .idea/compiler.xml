@@ -9,11 +9,11 @@
         <module name="myblog-provider" />
         <module name="myblog-eureka-server-high" />
         <module name="myblog-consumer2" />
-        <module name="myblog-consumer-hystrix" />
         <module name="myblog-eureka-server" />
         <module name="myblog-consumer-feign-hystrix" />
-        <module name="self-study" />
+        <module name="myblog-consumer-hystrix" />
         <module name="myblog-consumer" />
+        <module name="self-study" />
         <module name="myblog-consumer-feign" />
         <module name="myblog-provider2" />
       </profile>

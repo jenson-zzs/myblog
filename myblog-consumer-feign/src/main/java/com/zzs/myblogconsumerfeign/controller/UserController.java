@@ -1,7 +1,7 @@
-package com.zzs.myblogconsumer.controller;
+package com.zzs.myblogconsumerfeign.controller;
 
-import com.zzs.myblogconsumer.UserFeignClient;
-import com.zzs.myblogconsumer.domain.User;
+import com.zzs.myblogconsumerfeign.UserFeignClient;
+import com.zzs.myblogconsumerfeign.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

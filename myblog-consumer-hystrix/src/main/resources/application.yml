@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: myblog-consumer
+    name: myblog-consumer-hystrix
 
 eurekaServer:
   host: localhost
@@ -20,5 +20,14 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://${eurekaServer.user}:${eurekaServer.password}@${eurekaServer.host}:${eurekaServer.port}/eureka
-  instance:
-    prefer-ip-address: true
+#  instance:
+#    prefer-ip-address: true
+
+#  eureka.instance下hostname，instance-id，prefer-ip-address的作用及区别
+#
+#  eureka.instance下的hostname即主机名不配置的话默认为电脑名，instanceID不配置的话默认值为主机名+服务名+端口，
+#
+#  prefer-ip-address表示猜测主机名(hostname)为ip形式，不配置的话默认为false
+#  ————————————————
+#  版权声明：本文为CSDN博主「座上客」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+#  原文链接：https://blog.csdn.net/m0_37959155/article/details/122521406
