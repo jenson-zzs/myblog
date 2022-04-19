@@ -10,10 +10,11 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "MYBLOG-PROVIDER", configuration = com.zzs.config.LoadBalanced.class)
+//相比于MyblogConsumer，添加@RibbonClient，可以选择自己想要的负载均衡算法。但相同的是，都要加上@LoadBalanced
+@RibbonClient(name = "myblog-provider", configuration = com.zzs.config.LoadBalanced.class)
 public class MyblogConsumer2Application {
     @Bean
-//    @LoadBalanced//开启负载均衡
+    @LoadBalanced//开启负载均衡
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }

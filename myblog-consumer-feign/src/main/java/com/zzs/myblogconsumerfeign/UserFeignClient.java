@@ -5,14 +5,16 @@ import com.zzs.myblogconsumerfeign.domain.User;
 import feign.Param;
 import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
-//@FeignClient("myblog-provider")
-@FeignClient(value = "myblog-provider",configuration = Configuration.class)//指定使用想要的契约
+@FeignClient("myblog-provider")
+//@FeignClient(value = "myblog-provider",configuration = Configuration.class)//指定使用想要的契约
 public interface UserFeignClient {
 
-//    @GetMapping(value = "/user/getUser/{id}")
-//    public User getUser(@PathVariable("id")Long id);
+    @GetMapping(value = "/user/getUser/{id}")
+    public User getUser(@PathVariable("id")Long id);
 
-    @RequestLine("GET /user/getUser/{id}")
-    public User getUser(@Param("id") Long id);
+//    @RequestLine("GET /user/getUser/{id}")
+//    public User getUser(@Param("id") Long id);
 }

@@ -1,6 +1,6 @@
 package com.zzs.config;
 import com.netflix.loadbalancer.*;
-import com.zzs.myblogconsumer2.domain.TestRule;
+import com.zzs.config.domain.TestRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
