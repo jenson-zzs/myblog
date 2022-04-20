@@ -1,14 +1,17 @@
 package com.zzs.myblogprovider.controller;
 
+import com.zzs.myblogprovider.domain.LoginVo;
 import com.zzs.myblogprovider.domain.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.zzs.myblogprovider.service.LoginService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+    @Autowired
+    private LoginService loginService;
 
     @GetMapping(value = "/getUser/{id}")
     public User getUser(@PathVariable Long id){
@@ -23,4 +26,9 @@ public class UserController {
         return "张三";
     }
 
+    @PostMapping(value = "/login")
+    @ResponseBody
+    public String login(@RequestBody LoginVo loginVo){
+        return loginService.login(loginVo);
+    }
 }

@@ -19,3 +19,12 @@ myblog-provider:ribbon:NFLoadBalancerRuleClassName=指定类名
 @FeignClient(name = "myblog-provider", fallbackFactory = HystrixClientFactory.class)，
 feign.hystrix.enabled: true
 其中，fallbackFactory还可以知道熔断的异常原因是什么。
+
+
+目标：
+0.thread,
+1.crud,log4j,aop,postProcessor,
+2.redis,kafka,k8s,netty,nginx, starter, annotation
+
+已完成：
+thread, kafka
