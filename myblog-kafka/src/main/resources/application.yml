@@ -1,0 +1,36 @@
+server:
+  port: 9900
+
+eurekaServer:
+  host: localhost
+  port: 8761
+  user: root
+  password: root
+
+eureka:
+  client:
+    #将此项目注册到Eureka服务
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://${eurekaServer.user}:${eurekaServer.password}@${eurekaServer.host}:${eurekaServer.port}/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 60
+    lease-renewal-interval-in-seconds: 30
+    preferIpAddress: true
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+
+spring:
+  application:
+    name: testkafka
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        test-in: #TestStream 中 INPUT
+          destination: testkafka
+          contentType: application/json
+        test-out: #TestStream 中 OUTPUT
+          destination: testkafka
+          contentType: application/json

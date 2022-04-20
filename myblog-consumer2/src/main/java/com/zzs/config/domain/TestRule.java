@@ -1,4 +1,4 @@
-package com.zzs.myblogconsumer2.domain;
+package com.zzs.config.domain;
 import com.netflix.loadbalancer.ILoadBalancer;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.Server;
